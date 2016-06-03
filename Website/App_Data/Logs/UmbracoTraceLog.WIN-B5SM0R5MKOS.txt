@@ -1063,3 +1063,26 @@ _shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needF
  2016-06-03 11:02:36,571 [P14812/D7/T102] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 2ms)
  2016-06-03 11:02:40,388 [P14812/D7/T81] INFO  umbraco.content - Save Xml to file...
  2016-06-03 11:02:40,408 [P14812/D7/T127] INFO  umbraco.content - Saved Xml to file.
+ 2016-06-03 11:03:36,428 [P14812/D7/T111] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-06-02 11:03:36
+ 2016-06-03 11:03:36,575 [P14812/D7/T107] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2016-06-03 11:03:36,577 [P14812/D7/T107] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.Persistence.Mappers.BaseMapper, found 0 (took 1ms)
+ 2016-06-03 11:04:28,767 [P14812/D7/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2016-06-03 11:04:28,768 [P14812/D7/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 1ms)
+ 2016-06-03 11:04:28,772 [P14812/D7/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2016-06-03 11:04:28,773 [P14812/D7/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 0ms)
+ 2016-06-03 11:04:28,878 [P14812/D7/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2016-06-03 11:04:28,878 [P14812/D7/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 0ms)
+ 2016-06-03 11:04:28,931 [P14812/D7/T85] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.IApplication
+ 2016-06-03 11:04:28,933 [P14812/D7/T85] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.IApplication, found 0 (took 1ms)
+ 2016-06-03 11:04:57,384 [P14812/D7/T101] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ICacheRefresher
+ 2016-06-03 11:04:57,386 [P14812/D7/T101] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 0 (took 2ms)
+ 2016-06-03 11:05:05,456 [P14812/D7/T100] ERROR Umbraco.Web.WebServices.SaveFileController - An error occurred saving a file. An error occurred saving the file.
+System.UnauthorizedAccessException: Access to the path 'E:\Projects\UmbracoHebrewSearch\Website\css\site.css' is denied.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize)
+   at Umbraco.Core.IO.PhysicalFileSystem.AddFile(String path, Stream stream, Boolean overrideIfExists)
+   at Umbraco.Core.Persistence.Repositories.FileRepository`2.PersistUpdatedItem(TEntity entity)
+   at Umbraco.Core.Persistence.UnitOfWork.FileUnitOfWork.Commit()
+   at Umbraco.Core.Services.FileService.SaveStylesheet(Stylesheet stylesheet, Int32 userId)
+   at Umbraco.Web.WebServices.SaveFileController.SaveStylesheet(String filename, String oldName, String contents)

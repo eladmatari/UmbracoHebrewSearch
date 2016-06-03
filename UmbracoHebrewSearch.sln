@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Website", "Website\Website.csproj", "{1AB9B569-711B-4FCE-83BD-F0321B5EACB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HebMorph", "HebMorph\HebMorph.csproj", "{EF21A9E0-8FEE-43CD-8D60-B3696E033FED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucene.Net.Hebrew", "Lucene.Net.Analysis.Hebrew\Lucene.Net.Hebrew.csproj", "{53318212-385E-457B-8E5F-DDB117032A86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{1AB9B569-711B-4FCE-83BD-F0321B5EACB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AB9B569-711B-4FCE-83BD-F0321B5EACB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AB9B569-711B-4FCE-83BD-F0321B5EACB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF21A9E0-8FEE-43CD-8D60-B3696E033FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF21A9E0-8FEE-43CD-8D60-B3696E033FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF21A9E0-8FEE-43CD-8D60-B3696E033FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF21A9E0-8FEE-43CD-8D60-B3696E033FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53318212-385E-457B-8E5F-DDB117032A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53318212-385E-457B-8E5F-DDB117032A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53318212-385E-457B-8E5F-DDB117032A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53318212-385E-457B-8E5F-DDB117032A86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
