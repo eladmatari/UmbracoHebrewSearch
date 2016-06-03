@@ -2975,6 +2975,16 @@
   <ItemGroup>
     <Folder Include="Views\MacroPartials\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HebMorph\HebMorph.csproj">
+      <Project>{ef21a9e0-8fee-43cd-8d60-b3696e033fed}</Project>
+      <Name>HebMorph</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lucene.Net.Analysis.Hebrew\Lucene.Net.Hebrew.csproj">
+      <Project>{53318212-385e-457b-8e5f-ddb117032a86}</Project>
+      <Name>Lucene.Net.Hebrew</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

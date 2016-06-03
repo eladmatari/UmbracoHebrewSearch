@@ -2,17 +2,46 @@
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
     Layout = null;
+    string term = Request.QueryString["term"];
 }
 
 <html>
 <head>
     <title>@CurrentPage.title</title>
     <link href="~/Css/site.css" rel="stylesheet" />
+    <script>
+        function search() {
+            var href = window.location.href.split('?')[0];
+            window.location.href = href + '?term=' + encodeURIComponent(document.getElementById('searchInput').value);
+        }
+    </script>
 </head>
 <body>
     <h1>@CurrentPage.title</h1>
     <section>
         @Html.Raw(CurrentPage.description)
     </section>
+    <div>
+        <input type="text" id="searchInput" value="@term" />
+        <input type="button" value="חפש" onclick="search()" />
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(term))
+    {
+        var results = Website.Infrastructure.SearchTest.Search(term);
+
+        <div>
+            <h3>תוצאות חיפוש:</h3>
+            <ul>
+                @foreach (var result in results)
+                {
+                    <li>
+                        <a href="@result.Url">@result.Name</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+
 </body>
 </html>
