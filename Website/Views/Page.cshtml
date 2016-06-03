@@ -1,5 +1,18 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Page>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = null;
+    Layout = null;
 }
+
+<html>
+<head>
+    <title>@CurrentPage.title</title>
+    <link href="~/Css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>@CurrentPage.title</h1>
+    <section>
+        @Html.Raw(CurrentPage.description)
+    </section>
+</body>
+</html>
