@@ -175,7 +175,20 @@ namespace HebMorph
                         {
                             // TODO: Right now we store the word as-is. Perhaps we can assume this is a Noun or a name,
                             // and try removing prefixes and suffixes based on that?
-                            //retTokens.Add(new HebrewToken(nextToken, 0, 0, null, 1.0f));
+                            
+                            // New Code: Elad Matari
+                            if(LemmatizeUnknownWord != null)
+                            {
+                                var resNouns = LemmatizeUnknownWord(nextToken);
+
+                                if (resNouns != null)
+                                {
+                                    foreach (var nouns in resNouns)
+                                    {
+                                        retTokens.Add(new HebrewToken(nouns, 0, DMask.D_NOUN, null, 1.0f));
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -190,7 +203,9 @@ namespace HebMorph
             return currentPos;
         }
 
-		protected virtual string LookupWordCorrection(string word)
+        public static Func<string, string[]> LemmatizeUnknownWord;
+
+        protected virtual string LookupWordCorrection(string word)
 		{
 			return null;
 		}
